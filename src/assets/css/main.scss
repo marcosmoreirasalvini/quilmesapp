@@ -1,0 +1,39 @@
+//====================================
+// Global Imports
+//====================================
+// 1- Import bootstrap framework
+@import '1-frameworks/index';
+// 2 - Import plugins
+@import '2-plugins/index';
+// 3 - Import base style, custom variables and mixins
+@import '3-base/index';
+// 4 - Import modules
+@import '4-modules/index';
+// 5 - Import layout  styles
+@import '5-layout/index';
+body {
+  font-family: $font-family-sans-serif !important;
+  font-size: 15px;
+  //background: $dark;
+}
+#app {
+  max-width: 420px !important;
+  margin: 0 auto;
+  background: white;
+}
+.logo {
+  background: red;
+  width: 40px;
+  height: 40px;
+}
+
+#navbar-menu {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 50px;
+  .navbar-toggler {
+   font-size: 18px;
+  }
+  margin-bottom: 30px;
+}
+
