@@ -12,28 +12,66 @@
 // 5 - Import layout  styles
 @import '5-layout/index';
 body {
-  font-family: $font-family-sans-serif !important;
+  //font-family: $font-family-sans-serif !important;
   font-size: 15px;
   //background: $dark;
 }
 #app {
-  max-width: 420px !important;
+  //max-width: 420px !important;
   margin: 0 auto;
   background: white;
 }
 .logo {
-  background: red;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.main-title {
+  padding-bottom: 20px;
 }
 
 #navbar-menu {
   padding-top: 10px;
   padding-bottom: 10px;
-  height: 50px;
+  margin-bottom: 30px;
   .navbar-toggler {
    font-size: 18px;
   }
-  margin-bottom: 30px;
+  .bm-burger-button {
+    cursor: pointer;
+    height: 20px;
+    left: 36px;
+    position: absolute;
+    top: 10px;
+    width: 25px;
+    .bm-burger-bars {
+      background: $secondary;
+      height: 12%;
+    }
+    .bm-burger-bars:nth-child(1) {
+     }
+    .bm-burger-bars:nth-child(2) {
+      background: $primary;
+      margin-left: 4px;
+    }
+    .bm-burger-bars:nth-child(3) {
+      margin-left:10px;
+    }
+  }
 }
-
+.bm-menu {
+  background: $secondary;
+  .nav-link {
+    color: #fff;
+    text-align: left;
+    padding-left: 0;
+    font-size: 14px;
+    i {
+      margin-right: 10px;
+    }
+  }
+}

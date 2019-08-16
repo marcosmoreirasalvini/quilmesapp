@@ -1,52 +1,69 @@
 <template>
-  <div class="home">
-    <NavbarMenu></NavbarMenu>
-    <div class="row">
-      <div class="col-12">
-        <h1>Noticias</h1>
-        <b-card
-                title="Card Title"
-                img-src="https://picsum.photos/600/300/?image=25"
-                img-alt="Image"
-                img-top
-                tag="article"
-                class="mb-2"
-        >
-          <b-card-text>
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </b-card-text>
+    <div class='home'>
+        <!-- COMPONENTE DEL MENÚ -->
+        <NavbarMenu></NavbarMenu>
+        <div class="container">
+            <div class='row'>
+                <div class='col-12'>
 
-          <b-button href="#" variant="primary">Go somewhere</b-button>
-        </b-card>
-        <b-card
-                title="Card Title"
-                img-src="https://picsum.photos/600/300/?image=25"
-                img-alt="Image"
-                img-top
-                tag="article"
-                class="mb-2"
-        >
-          <b-card-text>
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </b-card-text>
-          <router-link to="/news/1" class="btn btn-primary">VER MAS</router-link>
+                    <!-- TITULO -->
+                    <h1 class="main-title">Noticias</h1>
 
-        </b-card>
-      </div>
+                    <!-- CARD -->
+                    <b-card v-for="article in news" no-body img-top tag="article" class="mb-2">
+                        <router-link :to="'noticias/'+article.id">
+                            <b-card-img :src="article.img_src"></b-card-img>
+                        </router-link>
+                        <b-card-body>
+                            <b-card-title>{{article.title}}</b-card-title>
+                            <b-card-text>
+                                {{article.small_text}}
+                            </b-card-text>
+                            <b-card-text class="small text-muted">{{article.time}}</b-card-text>
+                        </b-card-body>
+                    </b-card>
+                    <!-- / CARD -->
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue';
-import NavbarMenu from '@/components/NavbarMenu.vue'; // @ is an alias to /src
+<script lang='ts'>
 
-@Component({
-  components: {
-    NavbarMenu,
-    HelloWorld,
-  },
-})
-export default class Home extends Vue {}
+    // Importamos los componentes
+    import {Component, Vue} from "vue-property-decorator";
+    import NavbarMenu from "@/components/NavbarMenu.vue";
+
+    // Los declaramos
+    @Component({
+        components: {
+            NavbarMenu
+        }
+    })
+    export default class Home extends Vue {
+        data() {
+            return {
+                // Acá van todas las noticias
+                news: [
+                    {
+                        id: 1,
+                        title: "Eduardo Dominé asumirá como Director Deportivo",
+                        img_src: "../assets/img/eduardo-presidente.jpg",
+                        text: "",
+                        small_text: "En el camino de reestructuración que lleva adelante la actual conducción, se concretó la incorporación de Dominé al equipo de trabajo con la intención de potenciar y mejorar las disciplinas del Club.",
+                        time: "9 de agosto 2019"
+                    },
+                    {
+                        id: 2,
+                        title: "El pivot Juan Cruz Germano se suma para la Liga Argentina",
+                        img_src: "../assets/img/juan-cruz-germano.jpg",
+                        text: "",
+                        small_text: "Quilmes suma centímetros para reforzar la pintura. Juan Cruz Germano, pivot de 2,08 metros y 19 años, llega a préstamo por un año procedente de Boca Juniors y es la nueva ficha que tendrá a disposición el DT Manuel Gelpi.\n",
+                        time: "6 de agosto 2019"
+                    },
+                ],
+            };
+        }
+    }
 </script>
