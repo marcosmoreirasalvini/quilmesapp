@@ -93,3 +93,13 @@ h1.main-title {
     @extend .pb-3;
   }
 }
+
+//////// FORMS //////////
+
+.form-control {
+  border-top:none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid $gray-500;
+  background: $gray-100;
+}

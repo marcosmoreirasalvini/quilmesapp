@@ -8,7 +8,7 @@
                         Registro de usuario
                     </h1>
                     <b-button block variant="info" class="mb-3" to="/registro-datos">REGISTRARME CON FACEBOOK</b-button>
-                    <b-button block variant="secondary" to="/registro-datos">REGISTRARME CON MIS DATOS</b-button>
+                    <b-button block variant="primary" to="/registro-datos">REGISTRARME CON MIS DATOS</b-button>
                     <b-button block variant="link" to="/ingreso">YA SOY SOCIO</b-button>
 
                 </div>

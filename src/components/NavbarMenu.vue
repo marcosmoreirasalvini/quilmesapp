@@ -10,13 +10,10 @@
                     </div>
                     <div class="col-6 text-right">
                         <Slide :burgerIcon="true" right>
-                            <ul class="nav flex-column off-canvas">
-
-                                <!-- SI ESTÁ LOGUEADO -->
-
+                            <ul class="nav flex-column" v-if="user">
                                 <li class="nav-item">
                                     <router-link class="nav-link" to="/credencial">
-                                           MI CREDENCIAL
+                                        MI CREDENCIAL
                                     </router-link>
                                 </li>
                                 <li class="nav-item">
@@ -31,15 +28,12 @@
                                 </li>
                                 <li class="nav-item">
                                     <router-link class="nav-link" to="/cuenta">
-                                       MIS DATOS
+                                        MIS DATOS
                                     </router-link>
                                 </li>
-                                <!-- SI ESTÁ LOGUEADO -->
-
-
-
-
-                                <li class="nav-item mt-4">
+                            </ul>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
                                     <router-link class="nav-link" to="/noticias">
                                         NOTICIAS
                                     </router-link>
@@ -59,9 +53,10 @@
                                         EL CLUB
                                     </router-link>
                                 </li>
-
+                            </ul>
+                            <ul class="nav flex-column" v-if="!user">
                                 <!-- SI NO ESTÁ LOGUEADO -->
-                                <li class="nav-item mt-4">
+                                <li class="nav-item">
                                     <router-link class="nav-link" to="/registro">
                                         ASOCIARME
                                     </router-link>
@@ -72,16 +67,13 @@
                                     </router-link>
                                 </li>
                                 <!-- SI NO ESTÁ LOGUEADO -->
-
-                                <!-- SI ESTÁ LOGUEADO -->
-                                <li class="nav-item mt-4">
-                                    <router-link class="nav-link" to="/salir">
+                            </ul>
+                            <ul class="nav flex-column" v-if="user">
+                                <li class="nav-item">
+                                    <a class="nav-link" @click="logout()">
                                         Salir
-                                    </router-link>
+                                    </a>
                                 </li>
-                                <!-- SI ESTÁ LOGUEADO -->
-
-
                             </ul>
                         </Slide>
                     </div>
@@ -98,6 +90,27 @@
         name: 'NavbarMenu',
         components: {
             Slide // Register your component
+        },
+        data() {
+            const localuser = JSON.parse(localStorage.user)
+            return {
+                user: [
+                    {
+                        name: localuser.name,
+                        surname: localuser.surname,
+                        dni: localuser.dni,
+                        date: localuser.date,
+                        email: localuser.email,
+                    },
+                ],
+            };
+        },
+        methods: {
+            logout () {
+                this.user="";
+                this.localStorage.user="";
+                this.$router.push('/');
+            }
         }
     }
 </script>

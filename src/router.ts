@@ -47,9 +47,19 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/RegistroDatos.vue'),
     },
     {
+      path: '/registro-foto',
+      name: 'registro-foto',
+      component: () => import(/* webpackChunkName: "about" */ './views/RegistroFoto.vue'),
+    },
+    {
       path: '/ingreso',
       name: 'ingreso',
       component: () => import(/* webpackChunkName: "about" */ './views/Ingreso.vue'),
+    },
+    {
+      path: '/micuenta',
+      name: 'micuenta',
+      component: () => import(/* webpackChunkName: "about" */ './views/MiCuenta.vue'),
     },
   ],
 });
