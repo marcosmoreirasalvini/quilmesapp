@@ -5630,7 +5630,7 @@ button.bg-dark:focus {
 .my-2 {
   margin-top: 0.5rem !important; }
 
-.mr-2,
+.mr-2, .bm-menu .nav-link i,
 .mx-2 {
   margin-right: 0.5rem !important; }
 
@@ -5741,7 +5741,9 @@ button.bg-dark:focus {
   padding: 0.5rem !important; }
 
 .pt-2,
-.py-2 {
+.py-2,
+#navbar-menu,
+.single .img-fluid {
   padding-top: 0.5rem !important; }
 
 .pr-2,
@@ -5749,7 +5751,9 @@ button.bg-dark:focus {
   padding-right: 0.5rem !important; }
 
 .pb-2,
-.py-2 {
+.py-2,
+#navbar-menu,
+.single .img-fluid {
   padding-bottom: 0.5rem !important; }
 
 .pl-2,
@@ -5767,7 +5771,7 @@ button.bg-dark:focus {
 .px-3 {
   padding-right: 1rem !important; }
 
-.pb-3,
+.pb-3, h1.main-title, .page .main-title,
 .py-3 {
   padding-bottom: 1rem !important; }
 
@@ -5786,7 +5790,7 @@ button.bg-dark:focus {
 .px-4 {
   padding-right: 1.5rem !important; }
 
-.pb-4,
+.pb-4, #navbar-menu,
 .py-4 {
   padding-bottom: 1.5rem !important; }
 
@@ -9262,39 +9266,36 @@ html {
 /* Custom Mixins -------------------- */
 /* Base Styles -------------------- */
 body {
-  font-size: 15px; }
+  font-size: 15px;
+  background: white; }
 
 #app {
   margin: 0 auto;
   background: white; }
 
-#navbar-menu {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 30px; }
-  #navbar-menu .logo {
-    width: 35px;
-    height: 35px; }
-    #navbar-menu .logo img {
-      width: 100%;
-      height: auto; }
-  #navbar-menu .navbar-toggler {
-    font-size: 18px; }
-  #navbar-menu .bm-burger-button {
-    cursor: pointer;
-    height: 20px;
-    left: 36px;
-    position: absolute;
-    top: 10px;
-    width: 25px; }
-    #navbar-menu .bm-burger-button .bm-burger-bars {
-      background: #27251F;
-      height: 12%; }
-    #navbar-menu .bm-burger-button .bm-burger-bars:nth-child(2) {
-      background: #E4002B;
-      margin-left: 4px; }
-    #navbar-menu .bm-burger-button .bm-burger-bars:nth-child(3) {
-      margin-left: 10px; }
+#navbar-menu .logo {
+  width: 35px;
+  height: 35px; }
+  #navbar-menu .logo img {
+    width: 100%;
+    height: auto; }
+#navbar-menu .navbar-toggler {
+  font-size: 18px; }
+#navbar-menu .bm-burger-button {
+  cursor: pointer;
+  height: 20px;
+  left: 36px;
+  position: absolute;
+  top: 10px;
+  width: 25px; }
+  #navbar-menu .bm-burger-button .bm-burger-bars {
+    background: #27251F;
+    height: 12%; }
+  #navbar-menu .bm-burger-button .bm-burger-bars:nth-child(2) {
+    background: #E4002B;
+    margin-left: 4px; }
+  #navbar-menu .bm-burger-button .bm-burger-bars:nth-child(3) {
+    margin-left: 10px; }
 
 .bm-menu {
   background: #27251F; }
@@ -9303,13 +9304,5 @@ body {
     text-align: left;
     padding-left: 0;
     font-size: 14px; }
-    .bm-menu .nav-link i {
-      margin-right: 10px; }
-
-.single .img-fluid {
-  padding: 10px 0; }
-
-h1.main-title {
-  padding-bottom: 20px; }
 
 /*# sourceMappingURL=main.css.map */

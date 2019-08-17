@@ -15,6 +15,7 @@ body {
   //font-family: $font-family-sans-serif !important;
   font-size: 15px;
   //background: $dark;
+  background: white;
 }
 #app {
   //max-width: 420px !important;
@@ -22,15 +23,11 @@ body {
   background: white;
 }
 
-
-
-
 ///////// MENU //////////
 
 #navbar-menu {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 30px;
+  @extend .py-2;
+  @extend .pb-4;
   .logo {
     width: 35px;
     height: 35px;
@@ -72,7 +69,7 @@ body {
     padding-left: 0;
     font-size: 14px;
     i {
-      margin-right: 10px;
+      @extend .mr-2;
     }
   }
 }
@@ -80,11 +77,19 @@ body {
 ///////// SINGLE //////////
 .single {
   .img-fluid {
-    padding: 10px 0;
+    @extend .py-2;
   }
 }
 ///////// TEXT //////////
 
 h1.main-title {
-  padding-bottom: 20px;
+  @extend .pb-3;
+}
+
+//////// PAGE //////////
+
+.page {
+  .main-title {
+    @extend .pb-3;
+  }
 }

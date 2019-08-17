@@ -11,6 +11,9 @@
                     <div class="col-6 text-right">
                         <Slide :burgerIcon="true" right>
                             <ul class="nav flex-column off-canvas">
+
+                                <!-- SI ESTÁ LOGUEADO -->
+
                                 <li class="nav-item">
                                     <router-link class="nav-link" to="/credencial">
                                            MI CREDENCIAL
@@ -31,6 +34,11 @@
                                        MIS DATOS
                                     </router-link>
                                 </li>
+                                <!-- SI ESTÁ LOGUEADO -->
+
+
+
+
                                 <li class="nav-item mt-4">
                                     <router-link class="nav-link" to="/noticias">
                                         NOTICIAS
@@ -51,11 +59,27 @@
                                         EL CLUB
                                     </router-link>
                                 </li>
+
+                                <!-- SI NO ESTÁ LOGUEADO -->
+                                <li class="nav-item mt-4">
+                                    <router-link class="nav-link" to="/registro">
+                                        ASOCIARME
+                                    </router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <router-link class="nav-link" to="/ingreso">
+                                        INGRESAR
+                                    </router-link>
+                                </li>
+                                <!-- SI NO ESTÁ LOGUEADO -->
+
+                                <!-- SI ESTÁ LOGUEADO -->
                                 <li class="nav-item mt-4">
                                     <router-link class="nav-link" to="/salir">
                                         Salir
                                     </router-link>
                                 </li>
+                                <!-- SI ESTÁ LOGUEADO -->
 
 
                             </ul>

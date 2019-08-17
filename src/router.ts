@@ -14,42 +14,42 @@ export default new Router({
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
     {
       path: '/noticias/',
       name: 'noticias',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/Home.vue'),
     },
     {
       path: '/noticia/:id',
       name: 'noticia',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/Single.vue'),
     },
     {
       path: '/eventos/',
       name: 'eventos',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/Eventos.vue'),
     },
     {
       path: '/evento/:id',
       name: 'evento',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/Single.vue'),
+    },
+    {
+      path: '/registro',
+      name: 'registro',
+      component: () => import(/* webpackChunkName: "about" */ './views/RegistroHome.vue'),
+    },
+    {
+      path: '/registro-datos',
+      name: 'registro-datos',
+      component: () => import(/* webpackChunkName: "about" */ './views/RegistroDatos.vue'),
+    },
+    {
+      path: '/ingreso',
+      name: 'ingreso',
+      component: () => import(/* webpackChunkName: "about" */ './views/Ingreso.vue'),
     },
   ],
 });

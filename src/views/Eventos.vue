@@ -8,7 +8,7 @@
 
                     <!-- TITULO -->
                     <h1 class="main-title">Eventos</h1>
-                    
+
                     <!-- CARD -->
                     <b-card v-for="article in news" no-body img-top tag="article" class="mb-2">
                         <router-link :to="'evento/'+article.id">
