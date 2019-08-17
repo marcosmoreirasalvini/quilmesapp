@@ -7,11 +7,11 @@
                 <div class='col-12'>
 
                     <!-- TITULO -->
-                    <h1 class="main-title">Noticias</h1>
-
+                    <h1 class="main-title">Eventos</h1>
+                    
                     <!-- CARD -->
                     <b-card v-for="article in news" no-body img-top tag="article" class="mb-2">
-                        <router-link :to="'noticia/'+article.id">
+                        <router-link :to="'evento/'+article.id">
                             <b-card-img :src="article.img_src"></b-card-img>
                         </router-link>
                         <b-card-body>
@@ -35,7 +35,7 @@
     import NavbarMenu from "@/components/NavbarMenu.vue";
 
     export default {
-        name: 'Home',
+        name: 'Eventos',
         components: {
             NavbarMenu
         },
