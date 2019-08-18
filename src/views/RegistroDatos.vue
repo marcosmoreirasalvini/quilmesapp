@@ -94,7 +94,7 @@
             onSubmit(evt) {
                 evt.preventDefault()
                 localStorage.setItem('user', JSON.stringify(this.form));
-                this.$router.push('/registro');
+                this.$router.push('/registro-foto');
             },
         }
 

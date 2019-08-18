@@ -11,12 +11,14 @@
 @import '4-modules/index';
 // 5 - Import layout  styles
 @import '5-layout/index';
+
 body {
   //font-family: $font-family-sans-serif !important;
   font-size: 15px;
   //background: $dark;
   background: white;
 }
+
 #app {
   //max-width: 420px !important;
   margin: 0 auto;
@@ -28,17 +30,21 @@ body {
 #navbar-menu {
   @extend .py-2;
   @extend .pb-4;
+
   .logo {
     width: 35px;
     height: 35px;
+
     img {
       width: 100%;
       height: auto;
     }
   }
+
   .navbar-toggler {
-   font-size: 18px;
+    font-size: 18px;
   }
+
   .bm-burger-button {
     cursor: pointer;
     height: 20px;
@@ -46,28 +52,35 @@ body {
     position: absolute;
     top: 10px;
     width: 25px;
+
     .bm-burger-bars {
       background: $secondary;
       height: 12%;
     }
+
     .bm-burger-bars:nth-child(1) {
-     }
+    }
+
     .bm-burger-bars:nth-child(2) {
       background: $primary;
       margin-left: 4px;
     }
+
     .bm-burger-bars:nth-child(3) {
-      margin-left:10px;
+      margin-left: 10px;
     }
   }
 }
+
 .bm-menu {
   background: $secondary;
+
   .nav-link {
     color: #fff;
     text-align: left;
     padding-left: 0;
     font-size: 14px;
+
     i {
       @extend .mr-2;
     }
@@ -80,10 +93,14 @@ body {
     @extend .py-2;
   }
 }
+
 ///////// TEXT //////////
 
 h1.main-title {
   @extend .pb-3;
+  &.w-lead {
+    @extend .pb-1;
+  }
 }
 
 //////// PAGE //////////
@@ -97,9 +114,49 @@ h1.main-title {
 //////// FORMS //////////
 
 .form-control {
-  border-top:none;
+  border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 2px solid $gray-500;
   background: $gray-100;
+}
+
+.upload-pic {
+  opacity: 0;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.relative {
+  position: relative;
+}
+
+
+.credencial {
+  width: 350px;
+  height: 207px;
+  background:url("../img/credencial.png") no-repeat center center;
+  position: relative;
+  .image {
+    width: 103px;
+    height: 103px;
+    position: absolute;
+    top: 45px;
+    left: 26px;
+    background: none;
+    border:1px solid $gray-200;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.bg-light {
+  background: $gray-200 !important;
 }

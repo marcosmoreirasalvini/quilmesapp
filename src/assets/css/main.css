@@ -5729,7 +5729,7 @@ button.bg-dark:focus {
 .px-1 {
   padding-right: 0.25rem !important; }
 
-.pb-1,
+.pb-1, h1.main-title.w-lead,
 .py-1 {
   padding-bottom: 0.25rem !important; }
 
@@ -9311,5 +9311,38 @@ body {
   border-right: none;
   border-bottom: 2px solid #bbb;
   background: #f8f9fa; }
+
+.upload-pic {
+  opacity: 0;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1; }
+
+.relative {
+  position: relative; }
+
+.credencial {
+  width: 350px;
+  height: 207px;
+  background: url("../img/credencial.png") no-repeat center center;
+  position: relative; }
+  .credencial .image {
+    width: 103px;
+    height: 103px;
+    position: absolute;
+    top: 45px;
+    left: 26px;
+    background: none;
+    border: 1px solid #eee;
+    overflow: hidden; }
+    .credencial .image img {
+      width: 100%; }
+
+.bg-light {
+  background: #eee !important; }
 
 /*# sourceMappingURL=main.css.map */
