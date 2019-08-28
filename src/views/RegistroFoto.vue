@@ -17,13 +17,13 @@
                         <img v-if="url" :src="url"/>
                     </div>
                 </div>
-                <b-form @submit="onSubmit" class="text-center">
+                <b-form class="text-center">
                     <b-button class="relative mx-auto" variant="secondary">
                         <i class="fas fa-camera"></i> ELEGÍ TU FOTO
                         <div class="upload-pic">
                             <b-form-file
                                     id="file-upload"
-                                    :state="Boolean(file)"
+                                    :state="Boolean(form.picture)"
                                     v-model="form.picture"
                                     @change="onFileChange"
                                     placeholder="Choose a file or drop it here..."
@@ -35,7 +35,14 @@
             </div>
         </div>
         <div class="container">
-            <b-button block type="submit" to="/checkout" class="mt-4" variant="primary">SIGUENTE</b-button>
+            <b-button block @click.stop.prevent="handleSubmit()" class="mt-4" variant="primary">
+                <span v-if="form.picture">
+                    SIGUENTE
+                </span>
+                <span v-else>
+                    OMITIR
+                </span>
+            </b-button>
         </div>
     </div>
 </template>
@@ -48,19 +55,32 @@
         name: 'RegistroFoto',
         components: {NavbarNav},
         data() {
+            const localuser = JSON.parse(localStorage.user)
             return {
                 form: {
                     picture: '',
                 },
+                user: localuser,
                 url: null,
                 show: true
             }
         },
         methods: {
-            onSubmit(evt) {
-                evt.preventDefault()
-                localStorage.setItem('user', JSON.stringify(this.form));
-                //this.$router.push('/checkout');
+            handleSubmit() {
+                this.submitted = true;
+                this.$validator.validate().then(valid => {
+                    if (valid) {
+                        this.loading = true;
+                        const userUpdated = {
+                            ...JSON.parse(localStorage.user),
+                            ...{
+                                picture: this.url,
+                            }
+                        }
+                        localStorage.user = JSON.stringify(userUpdated)
+                        this.$router.push('/checkout');
+                    }
+                });
             },
             onFileChange(e) {
                 const file = e.target.files[0];
