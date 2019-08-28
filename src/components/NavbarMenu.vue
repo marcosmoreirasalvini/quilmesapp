@@ -22,7 +22,7 @@
                                     </router-link>
                                 </li>
                                 <li class="nav-item">
-                                    <router-link class="nav-link" to="/actividades">
+                                    <router-link class="nav-link" to="/mis-actividades">
                                         MIS ACTIVIDADES
                                     </router-link>
                                 </li>
@@ -49,7 +49,7 @@
                                     </router-link>
                                 </li>
                                 <li class="nav-item">
-                                    <router-link class="nav-link" to="/actividades">
+                                    <router-link class="nav-link" to="/club">
                                         EL CLUB
                                     </router-link>
                                 </li>

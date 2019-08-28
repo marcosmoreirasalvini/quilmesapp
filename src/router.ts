@@ -61,5 +61,50 @@ export default new Router({
       name: 'micuenta',
       component: () => import(/* webpackChunkName: "about" */ './views/MiCuenta.vue'),
     },
+    {
+      path: '/checkout',
+      name: 'checkout',
+      component: () => import(/* webpackChunkName: "about" */ './views/Checkout.vue'),
+    },
+    {
+      path: '/checkout-card',
+      name: 'checkout-card',
+      component: () => import(/* webpackChunkName: "about" */ './views/CheckoutCard.vue'),
+    },
+    {
+      path: '/exito',
+      name: 'exito',
+      component: () => import(/* webpackChunkName: "about" */ './views/Success.vue'),
+    },
+    {
+      path: '/credencial',
+      name: 'credencial',
+      component: () => import(/* webpackChunkName: "about" */ './views/Credencial.vue'),
+    },
+    {
+      path: '/cuotas',
+      name: 'cuotas',
+      component: () => import(/* webpackChunkName: "about" */ './views/Cuotas.vue'),
+    },
+    {
+      path: '/mis-actividades',
+      name: 'mis-actividades',
+      component: () => import(/* webpackChunkName: "about" */ './views/MisActividades.vue'),
+    },
+    {
+      path: '/actividades',
+      name: 'actividades',
+      component: () => import(/* webpackChunkName: "about" */ './views/Actividades.vue'),
+    },
+    {
+      path: '/cuenta',
+      name: 'cuenta',
+      component: () => import(/* webpackChunkName: "about" */ './views/Cuenta.vue'),
+    },
+    {
+      path: '/club',
+      name: 'club',
+      component: () => import(/* webpackChunkName: "about" */ './views/Club.vue'),
+    },
   ],
 });

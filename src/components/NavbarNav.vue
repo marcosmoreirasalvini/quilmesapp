@@ -1,5 +1,5 @@
 <template>
-    <div class="" id="navbar-menu">
+    <div class="" id="navbar-nav">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-6">
