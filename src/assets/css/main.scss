@@ -71,6 +71,14 @@ body {
     }
   }
 }
+#navbar-nav {
+  @extend .py-2;
+  @extend .pb-4;
+  a{
+    margin-top: 12px;
+    font-size: 20px;
+  }
+}
 
 .bm-menu {
   background: $secondary;
@@ -98,6 +106,7 @@ body {
 
 h1.main-title {
   @extend .pb-3;
+
   &.w-lead {
     @extend .pb-1;
   }
@@ -119,6 +128,8 @@ h1.main-title {
   border-right: none;
   border-bottom: 2px solid $gray-500;
   background: $gray-100;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .upload-pic {
@@ -140,8 +151,9 @@ h1.main-title {
 .credencial {
   width: 350px;
   height: 207px;
-  background:url("../img/credencial.png") no-repeat center center;
+  background: url("../img/credencial.png") no-repeat center center;
   position: relative;
+
   .image {
     width: 103px;
     height: 103px;
@@ -149,14 +161,30 @@ h1.main-title {
     top: 45px;
     left: 26px;
     background: none;
-    border:1px solid $gray-200;
+    border: 1px solid $gray-200;
     overflow: hidden;
+
     img {
       width: 100%;
     }
   }
 }
-
 .bg-light {
   background: $gray-200 !important;
+}
+
+
+//////// MESSAGES //////////
+.message {
+  .icon {
+    width: 100%;
+
+    i {
+      font-size: 100px;
+      color: $success;
+      vertical-align: middle;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
 }

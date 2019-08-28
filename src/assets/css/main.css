@@ -5743,6 +5743,7 @@ button.bg-dark:focus {
 .pt-2,
 .py-2,
 #navbar-menu,
+#navbar-nav,
 .single .img-fluid {
   padding-top: 0.5rem !important; }
 
@@ -5753,6 +5754,7 @@ button.bg-dark:focus {
 .pb-2,
 .py-2,
 #navbar-menu,
+#navbar-nav,
 .single .img-fluid {
   padding-bottom: 0.5rem !important; }
 
@@ -5790,7 +5792,7 @@ button.bg-dark:focus {
 .px-4 {
   padding-right: 1.5rem !important; }
 
-.pb-4, #navbar-menu,
+.pb-4, #navbar-menu, #navbar-nav,
 .py-4 {
   padding-bottom: 1.5rem !important; }
 
@@ -9297,6 +9299,10 @@ body {
   #navbar-menu .bm-burger-button .bm-burger-bars:nth-child(3) {
     margin-left: 10px; }
 
+#navbar-nav a {
+  margin-top: 12px;
+  font-size: 20px; }
+
 .bm-menu {
   background: #27251F; }
   .bm-menu .nav-link {
@@ -9310,7 +9316,9 @@ body {
   border-left: none;
   border-right: none;
   border-bottom: 2px solid #bbb;
-  background: #f8f9fa; }
+  background: #f8f9fa;
+  padding-left: 20px;
+  padding-right: 20px; }
 
 .upload-pic {
   opacity: 0;
@@ -9344,5 +9352,14 @@ body {
 
 .bg-light {
   background: #eee !important; }
+
+.message .icon {
+  width: 100%; }
+  .message .icon i {
+    font-size: 100px;
+    color: #4CAF50;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 auto; }
 
 /*# sourceMappingURL=main.css.map */
